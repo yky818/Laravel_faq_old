@@ -33,6 +33,15 @@ class UserTest extends TestCase
         $this->assertTrue(is_object($user->questions()->get()));
     }
 
-
+     /**
+     * A basic unit test To save Answers relationship with User.
+     *
+     * @return void
+     */
+    public function testAnswers()
+    {
+        $user = factory(\App\User::class)->make();
+        $this->assertTrue(is_object($user->answers()->get()));
+    }
 
 }
